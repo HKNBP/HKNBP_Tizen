@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/HKNBPTizenTV" version="1.0.0" viewmodes="fullscreen">
-    <tizen:application id="PhavApjV3l.HKNBPTizenTV" package="PhavApjV3l" required_version="2.3"/>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://hknbp.sourcekey.org/" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="3dO1YvHrH8.HKNBPTizen" package="3dO1YvHrH8" required_version="2.3"/>
+    <author email="sourcekeyorg@gmail.com">Source Key</author>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="icon.png"/>
     <license>GPLv3</license>
-    <name>HKNBPTizenTV</name>
+    <name>HKNBP_Tizen</name>
     <tizen:profile name="tv"/>
     <tizen:setting screen-orientation="auto-rotation" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
 </widget>
