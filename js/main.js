@@ -53,23 +53,24 @@ window.onload = function () {
 	var Teletext 			= 10200;
 	var Search 				= 10225;
 	
-	var hknbp_Core = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;
+	var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;
+	var remote = hknbpCore.VirtualRemote;
 	document.addEventListener('keydown', function(e) {
         switch (e.keyCode) {
 		case ArrowLeft:
-			
+			remote.leftButton.click();
 			break;
 		case ArrowUp:
-			
+			remote.upButton.click();
 			break;
 		case ArrowRight:
-			
+			remote.rightButton.click();
 			break;
 		case ArrowDown:
-			
+			remote.downButton.click();
 			break;
 		case Enter:
-			
+			remote.centerButton.click();
 			break;
 		case Back:
 			try {
@@ -85,92 +86,96 @@ window.onload = function () {
 			tizen.tvaudiocontrol.setVolumeDown();
 			break;
 		case VolumeMute:
-			
+			remote.volumeMuteButton.click();
 			break;
 		case ChannelUp:
-			hknbp_Core.nextChannel();
+			remote.nextChannelButton.click();
 			break;
 		case ChannelDown:
-			hknbp_Core.previousChannel();
+			remote.previousChannelButton.click();
 			break;
 		case ChannelList:
 			
 			break;
 		case ColorF0Red:
-			hknbp_Core.programmable(0);
+			remote.programmableRedButton.click();
 			break;
 		case ColorF1Green:
-			hknbp_Core.programmable(1);
+			remote.programmableGreenButton.click();
 			break;
 		case ColorF2Yellow:
-			hknbp_Core.programmable(2);
+			remote.programmableYellowButton.click();
 			break;
 		case ColorF3Blue:
-			hknbp_Core.programmable(3);
+			remote.programmableBlueButton.click();
 			break;
 		case Key_0:
-			hknbp_Core.onNumberKey("0");
+			remote.number0Button.click();
 			break;
 		case Key_1:
-			hknbp_Core.onNumberKey("1");
+			remote.number1Button.click();
 			break;
 		case Key_2:
-			hknbp_Core.onNumberKey("2");
+			remote.number2Button.click();
 			break;
 		case Key_3:
-			hknbp_Core.onNumberKey("3");
+			remote.number3Button.click();
 			break;
 		case Key_4:
-			hknbp_Core.onNumberKey("4");
+			remote.number4Button.click();
 			break;
 		case Key_5:
-			hknbp_Core.onNumberKey("5");
+			remote.number5Button.click();
 			break;
 		case Key_6:
-			hknbp_Core.onNumberKey("6");
+			remote.number6Button.click();
 			break;
 		case Key_7:
-			hknbp_Core.onNumberKey("7");
+			remote.number7Button.click();
 			break;
 		case Key_8:
-			hknbp_Core.onNumberKey("8");
+			remote.number8Button.click();
 			break;
 		case Key_9:
-			hknbp_Core.onNumberKey("9");
+			remote.number9Button.click();
 			break;
 		case Info:
-			
+			remote.tvChannelDescriptionButton.click();
 			break;
 		case Caption:
-			hknbp_Core.nextSubtitleTrack();
+			remote.nextSubtitleButton.click();
 			break;
 		case MTS:
-			hknbp_Core.nextAudioTrack();
+			remote.nextAudioButton.click();
 			break;
 		case PictureSize:
-			hknbp_Core.nextVideoTrack();
+			remote.nextVideoButton.click();
 			break;
 		case Guide:
-			
+			remote.epgButton.click();
+			break;
+		case Menu:
+			remote.menuButton.click();
 			break;
 		default:
-			hknbp_Core.promptMessage("本程式並無此功能提供");
+			hknbpCore.PromptBox.promptMessage("本程式並無此功能提供");
 			break;
 		}
     });
 	
 	//虛擬搖控刮修定
-	hknbp_Core.volumeUp = function(){
+	remote.volumeUp = function(){
 		tizen.tvaudiocontrol.setVolumeUp();
 	};
-	hknbp_Core.volumeDown = function(){
+	remote.volumeDown = function(){
 		tizen.tvaudiocontrol.setVolumeDown();
 	};
-	hknbp_Core.volumeMute = function(){
+	/**
+	remote.volumeMute = function(){
 		if(tizen.tvaudiocontrol.isMute()){
 			tizen.tvaudiocontrol.setMute(false);
 		}else{
 			tizen.tvaudiocontrol.setMute(true);
 		}
-	};
+	};*/
 };
