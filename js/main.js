@@ -1,5 +1,12 @@
-//實體搖控刮
+var hknbpTizenAppVersion = "0.9-Tizen";
+
 window.onload = function () {
+    var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;
+
+    //設置程式版編號
+    hknbpCore.appVersion = hknbpTizenAppVersion;
+
+    //實體搖控刮
 	var ArrowLeft 			= 37;
 	var ArrowUp 			= 38;
 	var ArrowRight 			= 39;
@@ -53,7 +60,6 @@ window.onload = function () {
 	var Teletext 			= 10200;
 	var Search 				= 10225;
 	
-	var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;
 	var remote = hknbpCore.VirtualRemote;
 	document.addEventListener('keydown', function(e) {
         switch (e.keyCode) {
@@ -163,7 +169,7 @@ window.onload = function () {
 		}
     });
 	
-	//虛擬搖控刮修定
+	//虛擬搖控制修定
 	remote.volumeUp = function(){
 		tizen.tvaudiocontrol.setVolumeUp();
 	};
