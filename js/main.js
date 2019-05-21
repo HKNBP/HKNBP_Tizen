@@ -1,3 +1,17 @@
+/*
+ * HKNBP_Tizen is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * HKNBP_Tizen is distributed in the hope that it will be useful,
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with HKNBP_Tizen.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 var hknbpTizenAppVersion = "0.9-Tizen";
 
 window.onload = function () {
@@ -59,9 +73,8 @@ window.onload = function () {
 	var Soccer 				= 10228;
 	var Teletext 			= 10200;
 	var Search 				= 10225;
-	
 	var remote = hknbpCore.VirtualRemote;
-	document.addEventListener('keydown', function(e) {
+	document.getElementById("HKNBP_Core").contentWindow.addEventListener('keydown', function(e) {
         switch (e.keyCode) {
 		case ArrowLeft:
 			remote.leftButton.click();

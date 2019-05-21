@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ HKNBP_Tizen is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ HKNBP_Tizen is distributed in the hope that it will be useful,
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with HKNBP_Tizen.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
 <widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="https://hknbp.org/" version="1.0.0" height="405" width="720" viewmodes="fullscreen">
     <tizen:application id="3dO1YvHrH8.HKNBPTizen" package="3dO1YvHrH8" required_version="2.3"/>
     <author href="https://hknbp.org/" email="hknbp@sourcekey.org">Source Key</author>
