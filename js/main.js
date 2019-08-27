@@ -74,7 +74,8 @@ window.onload = function () {
 	var Teletext 			= 10200;
 	var Search 				= 10225;
 	var remote = hknbpCore.VirtualRemote;
-	document.getElementById("HKNBP_Core").contentWindow.addEventListener('keydown', function(e) {
+	document.addEventListener('keydown', function(e) {
+		console.log(e.keyCode);
         switch (e.keyCode) {
 		case ArrowLeft:
 			remote.leftButton.click();
@@ -92,11 +93,8 @@ window.onload = function () {
 			remote.centerButton.click();
 			break;
 		case Back:
-			try {
-			    tizen.application.getCurrentApplication().exit();
-			} catch (ignore) {
-				
-			}
+			remote.returnButton.click();
+			//try {tizen.application.getCurrentApplication().exit();} catch (ignore) {}
 			break;
 		case VolumeUp:
 			tizen.tvaudiocontrol.setVolumeUp();
@@ -114,7 +112,7 @@ window.onload = function () {
 			remote.previousChannelButton.click();
 			break;
 		case ChannelList:
-			
+			remote.epgButton.click();
 			break;
 		case ColorF0Red:
 			remote.programmableRedButton.click();
@@ -159,7 +157,7 @@ window.onload = function () {
 			remote.number9Button.click();
 			break;
 		case Info:
-			remote.tvChannelDescriptionButton.click();
+			remote.channelDescriptionButton.click();
 			break;
 		case Caption:
 			remote.nextSubtitleButton.click();
@@ -173,7 +171,16 @@ window.onload = function () {
 		case Guide:
 			remote.epgButton.click();
 			break;
+		case Minus:
+			remote.minusButton.click();
+			break;
+		case PreviousChannel:
+			remote.lastTimeChannelButton.click();
+			break;
 		case Menu:
+			remote.menuButton.click();
+			break;
+		case Tools:
 			remote.menuButton.click();
 			break;
 		default:
@@ -181,15 +188,15 @@ window.onload = function () {
 			break;
 		}
     });
-	
+
 	//虛擬搖控制修定
+	/**
 	remote.volumeUp = function(){
 		tizen.tvaudiocontrol.setVolumeUp();
 	};
 	remote.volumeDown = function(){
 		tizen.tvaudiocontrol.setVolumeDown();
 	};
-	/**
 	remote.volumeMute = function(){
 		if(tizen.tvaudiocontrol.isMute()){
 			tizen.tvaudiocontrol.setMute(false);
