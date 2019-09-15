@@ -73,6 +73,7 @@ window.onload = function () {
 	var Soccer 				= 10228;
 	var Teletext 			= 10200;
 	var Search 				= 10225;
+	
 	var remote = hknbpCore.VirtualRemote;
 	document.addEventListener('keydown', function(e) {
 		console.log(e.keyCode);
@@ -114,7 +115,7 @@ window.onload = function () {
 		case ChannelList:
 			remote.epgButton.click();
 			break;
-		case ColorF0Red:
+		case ColorF0Red:////////////////////////////////////////////
 			remote.programmableRedButton.click();
 			break;
 		case ColorF1Green:
