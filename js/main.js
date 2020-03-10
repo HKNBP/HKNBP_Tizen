@@ -12,7 +12,7 @@
  * along with HKNBP_Tizen.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-var hknbpTizenAppVersion = "0.9-Tizen";
+var hknbpTizenAppVersion = "v1.1-Tizen";
 
 window.onload = function () {
     var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;
@@ -189,20 +189,19 @@ window.onload = function () {
 			break;
 		}
     });
-
+	
 	//虛擬搖控制修定
-	/**
-	remote.volumeUp = function(){
+	hknbpCore.Player.volumeUp = function(){
 		tizen.tvaudiocontrol.setVolumeUp();
 	};
-	remote.volumeDown = function(){
+	hknbpCore.Player.volumeDown = function(){
 		tizen.tvaudiocontrol.setVolumeDown();
 	};
-	remote.volumeMute = function(){
+	hknbpCore.Player.volumeMute = function(){
 		if(tizen.tvaudiocontrol.isMute()){
 			tizen.tvaudiocontrol.setMute(false);
 		}else{
 			tizen.tvaudiocontrol.setMute(true);
 		}
-	};*/
+	};
 };

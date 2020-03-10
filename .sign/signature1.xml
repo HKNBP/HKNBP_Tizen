@@ -16,11 +16,11 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>NNIx3rfmDCBQanHwXfNEM4LElslzu/pEtFqATwt8RfE=</DigestValue>
+<DigestValue>tepyYzc4d5mJtQg0jgzzVK5USYGmS72E87RWCUQ9JW8=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>kbWlDPtrdRAJea+hIEleSefc3JTDoMEFuvt4lp2dvJE=</DigestValue>
+<DigestValue>xTyEjGM2+AccUw+x1i81jyjFHNjdBK1frQ1B66sXA7E=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -32,11 +32,11 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ppUyGur8MjJjVSbQnhXmqY9bzgdakXGXXa9Q85f++uQ=</DigestValue>
+<DigestValue>h3mV2571SrdY2dCZSagKipOyoa8DlIcobh7CUt0xMoE=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>79plzXQTmOaGWXCuVO+kmq0/Jy2xESmpE+Dux9VAyS8=</DigestValue>
+<DigestValue>G0I0Qc1MiX1IJMXqNlMBd4VyEa7aiPNgzZufLlU5+d4=</DigestValue>
 </Reference>
 <Reference URI="version.txt">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -51,9 +51,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-DTFLZrweFJp8ab8HOb+PUGGkEdqREzqpanesVf/Zz4FvYJdO+9LtGY2nTNofzN2ACl8GLi7qKxym
-i1a/2v3TNGMfCTQSYIHJldJjnAOpmivJMjeQfyiu2KuMUSEdeMRP1Nl+I5Ib2JxqrHLUxBvkRBPC
-Cln+U/ragTnytmmvU4M=
+iPDXh2nIm2ipL0PE3DSkhY/gUhNRcQowsTLOCkPjfLxsZgrQelBE7BdYqWNugjbNXBEndDCKshKc
+OjVwji9OCKndc3DqE4EntOSBb5g8Y5l0A37upCd79nyvhkg4FqH3AEQAVykdXoMGeNm65QNl1o1k
+EpVsBlmjCHiULtVRlOg=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
