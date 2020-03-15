@@ -12,7 +12,7 @@
  * along with HKNBP_Tizen.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-var hknbpTizenAppVersion = "v1.1-Tizen";
+var hknbpTizenAppVersion = "v1.2-Tizen";
 
 window.onload = function () {
     var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;

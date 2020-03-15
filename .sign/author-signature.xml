@@ -16,7 +16,7 @@
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>xTyEjGM2+AccUw+x1i81jyjFHNjdBK1frQ1B66sXA7E=</DigestValue>
+<DigestValue>vgPwhumASdpG1aCjjzoKuMukUBLIhtoACf5moU5NNmQ=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -32,7 +32,7 @@
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>G0I0Qc1MiX1IJMXqNlMBd4VyEa7aiPNgzZufLlU5+d4=</DigestValue>
+<DigestValue>EFqfz1ggoUdIkO05VFfaCk9OXxqgHDw/nRwwCHPLZnE=</DigestValue>
 </Reference>
 <Reference URI="version.txt">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -47,9 +47,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-N8vI43XpRnJZHcSsEQUjXqXrdNZM0NJa5/RKaDSkHwrMWJyOGnQ8fOmvY6TtgIYJKfgC2ek+RuMf
-AEtddHBqWD6Iee9TFGchKEKqwZIzudHeli+jf2yYZGyg2JoOtcxeNH8wyY1o7tRFjPgOdCPC/GXJ
-owH1QJprK+wYiuYMH8s=
+byc0xUYI3Vh92fPujgVIDF5zIkPYdWX5VWZdBVfKqe/nsnPCwuhkaEZZjXQrYrzIr7NGkXPvkhVT
+8hHkUOsY8FFjCqSwYx84opwbMDXgJoOEi5gybh3GmoZJunQTEMbFrWOOZJyZLYa/vLivfw75HCX2
+Aq011qIWExdHTQf6nnA=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
