@@ -12,9 +12,9 @@
  * along with HKNBP_Tizen.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-var hknbpTizenAppVersion = "v1.2-Tizen";
+var hknbpTizenAppVersion = "v1.3-Tizen";
 
-window.onload = function () {
+document.getElementById("HKNBP_Core").onload = function () {
     var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;
 
     //設置程式版編號
@@ -75,23 +75,28 @@ window.onload = function () {
 	var Search 				= 10225;
 	
 	var remote = hknbpCore.VirtualRemote;
-	document.addEventListener('keydown', function(e) {
+	var keydown = function(e) {
 		console.log(e.keyCode);
         switch (e.keyCode) {
 		case ArrowLeft:
 			remote.leftButton.click();
+			e.preventDefault();
 			break;
 		case ArrowUp:
 			remote.upButton.click();
+			e.preventDefault();
 			break;
 		case ArrowRight:
 			remote.rightButton.click();
+			e.preventDefault();
 			break;
 		case ArrowDown:
 			remote.downButton.click();
+			e.preventDefault();
 			break;
 		case Enter:
 			remote.centerButton.click();
+			e.preventDefault();
 			break;
 		case Back:
 			remote.returnButton.click();
@@ -188,7 +193,10 @@ window.onload = function () {
 			hknbpCore.PromptBox.promptMessage("本程式並無此功能提供");
 			break;
 		}
-    });
+    }
+	
+	document.addEventListener('keydown', keydown);
+	document.getElementById("HKNBP_Core").contentWindow.addEventListener('keydown', keydown);
 	
 	//虛擬搖控制修定
 	hknbpCore.Player.volumeUp = function(){
