@@ -4,13 +4,13 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"></SignatureMethod>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></DigestMethod>
-<DigestValue>Kzv0C3tom4jfT6SwlGo/XberRy7caRetdMm2kfdOIEwQjTavDdu+pLzon0TpqSbbdGDduWEtJujZ
-U0LvQFRVQQ==</DigestValue>
+<DigestValue>Dc5s3PBhnXNP5WQsOVOJpj3JqRlDqPKxlvC4fKsvzW5W1V8UbOFgmyeKmjDtI8f3Le17R7zahl1T
+0D0/knQ9eQ==</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></DigestMethod>
-<DigestValue>9xYfW+6efpcDt/ITqjXNetrmDm1gOQpboDz+Vho2e9t+EKRsc9soOJZxIlYDoPiAmy6Ht8CzTciE
-gGqizYUgvg==</DigestValue>
+<DigestValue>MVIXtf6W1vnRVlIB+y2nTRRO6AdYKantU9poTX/RhHZyWLkKaZ+T8IumU/1DgHdA9aph2jWioDDO
+7mYzjVQvUQ==</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></DigestMethod>
@@ -24,13 +24,18 @@ F4RSO9BCTA==</DigestValue>
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></DigestMethod>
-<DigestValue>bDivLlqrPgXa7k1JloAkJbE28hHLR3eYq8Dc3SA0+pCO955UUcC+vq4TjdY1sTkikgslZe6s6Fot
-8Ae6xbP3mw==</DigestValue>
+<DigestValue>pMCLsPzGEBZYPcENbPCkNKL2jRp5o5G7sImXnXEPu6LPqReg/S2sjkmCHketFIovrORMDBpgQiqw
+P9G3yUBThQ==</DigestValue>
+</Reference>
+<Reference URI="js%2Fkeycode.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></DigestMethod>
+<DigestValue>PEJrKiSNICQO/+8bUrc1ZSw1wq12hl07CSfYlc51acN2ko7GD9KB91PZPJxGPLNqQF86Gsv31HMu
+VhV5ZoBegQ==</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></DigestMethod>
-<DigestValue>UR2RsyqAytiRsCgawy0L+DDZDTTIhe8le5ChplbMcJF60H8/S/hVBYOwi4bmJ3bWWUAk3laqoA3N
-ba8aka0A/Q==</DigestValue>
+<DigestValue>rQ5J+B8TXEb92JOCBE+mXrE0GOGhlCSLb/tDk0OuHXGvLRTOia5jg3OHwj1EGrcgJQIkNIWXDXAy
+wgFoceC8wA==</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -42,9 +47,9 @@ GyvKX9Snig==</DigestValue>
 </Reference>
 </SignedInfo>
 <SignatureValue>
-BXaqvkU7+81tz/BjhHvBvPuADt5vACYMXPgmYuRscWZVBUVPGTApTjNXwPzz82Dy7B4dclrgC8hn
-HWGhvnBIzkuHCEcfiMZUpbad/0LwuD8Zy+diGjmbh/9qYL0tV9WChBzN+yCoH4Atm/52J/hJDq0e
-8IHndE2qAr20GKSVIAo=
+gUIOCJiGhF+LTP5v5+hhrYwFUhGrmceuQcPNlqS3q1pJvIEU2VXFa/HWK+nEWY92OATli3+I8Rlt
+uO0Vg5JFKuTWYqEiHXnXdJT09QaGvv6T+qNaZVgv1696k3q0sRbm4gaMJOIw+SjgfIl9XBDzp7KH
+3atA9Dr0wWhvgaTWxsc=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
