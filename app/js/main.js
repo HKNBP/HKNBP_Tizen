@@ -54,6 +54,7 @@ document.getElementById("HKNBP_Core").onload = function () {
 			break;
 		case Enter:
 			remote.centerButton.click();
+			e.preventDefault();
 			break;
 		case Back:
 			remote.returnButton.click();

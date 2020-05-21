@@ -1,0 +1,4 @@
+"https://hknbp.org/iframePlayer/youtube_api.html?sourceSrc=ekthcIHDt3I"  
+"https://hknbp.org/iframePlayer/videojs.html?sourceSrc=https://vm2.dashif.org/livesim/testpic_2s/cea608_and_segs.mpd"  
+"https://hknbp.org/iframePlayer/videojs.html?sourceSrc=https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"
+
