@@ -16,22 +16,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="香港網路廣播平臺"/>
-    <title>香港網路廣播平臺</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="香港網路廣播平臺" />
+<title>香港網路廣播平臺</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+  		//第一時間push一個State防止APP未完全初始化時被按BACK制退至WebOSAppsMenu
+  		//由於退至WebOSAppsMenu會影響APP嘅初始化使出現Bug(例如:用唔到Remote操控個APP問題)
+  		//window.history.pushState("", "", "");
+
+  		//防止個App退至WebOSAppsMenu
+  		//window.addEventListener("popstate", function(event){window.history.pushState("", "", "");}, false);
+
+  		//防止HKNBP_Core Load唔到時, 自動重新Load過個APP
+  		window.setInterval(function (){
+  			try{
+  				var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.hknbpCore;
+  				if(hknbpCore == null){document.getElementById("HKNBP_Core").src="https://hknbp.org";}
+  			}catch(e){
+  				//location.reload();
+  				document.getElementById("HKNBP_Core").src = "HKNBP_Core/index.html";//內置本地快取
+  				//location.href="http://hknbp.org/";
+  			}
+  		}, 10000);
+  		//location.href="http://www2.videojs.com/";
+    </script>
 </head>
 <body>
-	<iframe 
-		id="HKNBP_Core" 
-		src="https://test.hknbp.org/"  
-		frameBorder="0" 
-		allow="autoplay; fullscreen;">
-		你嘅瀏覽器唔支援iframe
-	</iframe>
+	<iframe
+    id="HKNBP_Core"
+    src="https://hknbp.org/"
+    frameBorder="0"
+    allow="autoplay; fullscreen;">
+    你嘅瀏覽器唔支援iframe 
+  </iframe>
 	<script type="text/javascript" src="js/keycode.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

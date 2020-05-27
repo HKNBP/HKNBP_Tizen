@@ -12,30 +12,31 @@
  * along with HKNBP_Tizen.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-function getFile(filePath){
+function getFile(filePath) {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("GET", filePath, false);
 	xmlhttp.send();
 	return xmlhttp;
 }
 
-function getAppVersion(){
+function getAppVersion() {
 	var xmlDoc = getFile("config.xml").responseXML;
 	return xmlDoc.getElementsByTagName("widget")[0].getAttribute("version");
 }
 
-var hknbpTizenAppVersion = "v"+getAppVersion()+"-Tizen";
+var hknbpTizenAppVersion = "v" + getAppVersion() + "-Tizen";
 
-document.getElementById("HKNBP_Core").onload = function () {
-    var hknbpCore = document.getElementById("HKNBP_Core").contentWindow.HKNBP_Core.org.sourcekey.hknbp.hknbp_core;
+var hknbpCoreIframe = document.getElementById("HKNBP_Core");
+hknbpCoreIframe.addEventListener("load", function() {
+	var hknbpCoreIndex = hknbpCoreIframe.contentWindow;
 
-    //設置程式版編號
-    hknbpCore.appVersion = hknbpTizenAppVersion;
-	
-	var remote = hknbpCore.VirtualRemote;
+	// 設置程式版編號
+	hknbpCoreIndex.hknbpAppVersion(hknbpTizenAppVersion);
+
+	// 設定實體搖控 (Emulator上測試只有方向鍵同Enter鍵有反應其餘冇)
+	var remote = hknbpCoreIndex.hknbpRemote;
 	var keydown = function(e) {
-		console.log(e.keyCode);
-        switch (e.keyCode) {
+		switch (e.keyCode) {
 		case ArrowLeft:
 			remote.leftButton.click();
 			e.preventDefault();
@@ -58,7 +59,8 @@ document.getElementById("HKNBP_Core").onload = function () {
 			break;
 		case Back:
 			remote.returnButton.click();
-			//try {tizen.application.getCurrentApplication().exit();} catch (ignore) {}
+			// try {tizen.application.getCurrentApplication().exit();} catch
+			// (ignore) {}
 			break;
 		case VolumeUp:
 			tizen.tvaudiocontrol.setVolumeUp();
@@ -78,7 +80,7 @@ document.getElementById("HKNBP_Core").onload = function () {
 		case ChannelList:
 			remote.epgButton.click();
 			break;
-		case ColorF0Red:////////////////////////////////////////////
+		case ColorF0Red:// //////////////////////////////////////////
 			remote.programmableRedButton.click();
 			break;
 		case ColorF1Green:
@@ -148,25 +150,25 @@ document.getElementById("HKNBP_Core").onload = function () {
 			remote.menuButton.click();
 			break;
 		default:
-			hknbpCore.PromptBox.promptMessage("本程式並無此功能提供");
+			hknbpCoreIndex.hknbpPrompt("本程式並無此功能提供");
 			break;
 		}
-    }
-	document.addEventListener('keydown', keydown); //測試 Emulator唔得 Simulator得
-	document.getElementById("HKNBP_Core").contentWindow.addEventListener('keydown', keydown); //測試 Emulator得 Simulator唔得
-	
-	//虛擬搖控制修定
-	hknbpCore.Player.volumeUp = function(){
+	}
+	document.addEventListener('keydown', keydown); // 測試 Emulator唔得 Simulator得
+	hknbpCoreIndex.addEventListener('keydown', keydown); // 測試 Emulator得 Simulator唔得
+
+	// 虛擬搖控制修定
+	hknbpCoreIndex.hknbpVolumeUp(function() {
 		tizen.tvaudiocontrol.setVolumeUp();
-	};
-	hknbpCore.Player.volumeDown = function(){
+	});
+	hknbpCoreIndex.hknbpVolumeDown(function() {
 		tizen.tvaudiocontrol.setVolumeDown();
-	};
-	hknbpCore.Player.volumeMute = function(){
-		if(tizen.tvaudiocontrol.isMute()){
+	});
+	hknbpCoreIndex.hknbpVolumeMute(function() {
+		if (tizen.tvaudiocontrol.isMute()) {
 			tizen.tvaudiocontrol.setMute(false);
-		}else{
+		} else {
 			tizen.tvaudiocontrol.setMute(true);
 		}
-	};
-};
+	});
+});
